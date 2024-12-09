@@ -18,9 +18,16 @@ DiscordAPIRedirectURL.search = new URLSearchParams(searchParams).toString()
 
 export default function Page() {
   return (
-    <body>
-      <h1>Discord Login</h1>
-      <a href={DiscordAPIRedirectURL.toString()}>Login with Discord</a>
+    <body className="bg-gray-800 text-center">
+      <div className="grid grid-flow-row items-center max-h-sm justify-center gap-8 my-24">
+        <h1 className="text-4xl text-white">Discord Profile Grabber</h1>
+        <a
+          href={DiscordAPIRedirectURL.toString()}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Login with Discord
+        </a>
+      </div>
     </body>
   )
 }
