@@ -11,11 +11,11 @@ import { Icon } from '@iconify-icon/react';
  * @param {string} param0.title The title of the social media profile
  */
 export default function SocialIcon({ link, pack, icon, title }: { link: string, pack: string, icon: string, title: string }) {
-    const baseClasses = 'hover:text-indigo-500 hover:scale-110 transition-all duration-300 p-0 border-1 border-solid border-transparent rounded-3xl no-underline items-center self-center justify-center flex flex-col pt-4 text-gray-700 text-5xl';
+    const baseClasses = 'hover:text-indigo-500 p-0 no-underline items-center self-center justify-center my-1 text-gray-700 text-5xl size-24';
     return (
-        <div className='justify-evenly size-full flex content-center p-2'>
+        <div className='justify-evenly size-24 flex content-center'>
             <a href={link} target='_blank' className={baseClasses} title={title} rel='me'>
-                <Icon icon={`${pack}:${icon}`} className={baseClasses} />
+                <Icon icon={`${pack}:${icon}`} className={baseClasses + " flex"} />
             </a>
         </div>
     );

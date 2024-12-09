@@ -334,7 +334,7 @@ export default async function Page({ searchParams }: FunctionParams) {
                             Guilds: {userInfo.guilds.length}
                         </Description>
                         <div className="flex flex-col items-center justify-center my-4">
-                            <div className="grid grid-cols-6 gap-4">
+                            <div className="grid grid-cols-3 gap-4 w-full">
                                 {userInfo.guilds.map((guild) => (
                                     <div
                                         key={guild.id}
@@ -343,10 +343,10 @@ export default async function Page({ searchParams }: FunctionParams) {
                                         <img
                                             src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=4096`}
                                             alt={guild.name}
-                                            className="rounded-lg w-24 h-24"
+                                            className="rounded-lg size-24"
                                         />
                                         <Description>
-                                            {guild.name}
+                                            {guild.name.split(/[\|]/gmi)[0]}
                                         </Description>
                                     </div>
                                 ))}
@@ -355,18 +355,20 @@ export default async function Page({ searchParams }: FunctionParams) {
                         <h2 className="text-xl text-gray-600 dark:text-gray-300">
                             Connections
                         </h2>
-                        <div className="grid grid-cols-6 gap-4">
-                            {userInfo.connections.map((connection) => (
-                                <div
-                                    key={connection.id}
-                                    className="flex flex-col items-center justify-center"
-                                >
-                                    {ConnectionToIcon(connection)}
-                                    <Description>
-                                        {connection.name}
-                                    </Description>
-                                </div>
-                            ))}
+                        <div className="flex flex-col items-center justify-center my-4">
+                            <div className="grid grid-cols-3 gap-4 w-full">
+                                {userInfo.connections.map((connection) => (
+                                    <div
+                                        key={connection.id}
+                                        className="grid grid-flow-row items-center justify-center gap-2"
+                                    >
+                                        {ConnectionToIcon(connection)}
+                                        <Description>
+                                            {connection.name}
+                                        </Description>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
