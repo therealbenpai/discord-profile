@@ -1,3 +1,24 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "arrow-parens": ["error", "as-needed"],
+    "arrow-spacing": "error",
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "camelcase": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": "error",
+    "comma-style": "error",
+    "computed-property-spacing": "error",
+    "eol-last": "error",
+    "eqeqeq": "error",
+    "func-call-spacing": "error",
+    "key-spacing": "error",
+    "keyword-spacing": "error",
+    "no-console": "error",
+    "prefer-const": "error",
+    "id-length": ["error", { "min": 2, "exceptions": ["k", "v", "_"] }],
+    "semi": "error",
+    "space-before-blocks": "error"
+  }
 }
