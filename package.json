@@ -22,7 +22,7 @@
     "discord-api-types": "^0.37.110",
     "eslint": "^8.57.0",
     "iconify-icon": "^2.1.0",
-    "next": "14.2.7",
+    "next": "14.2.20",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "preline": "^2.4.1",
